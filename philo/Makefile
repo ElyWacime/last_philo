@@ -8,7 +8,7 @@ CFILES = main.c \
 			time_utils.c \
 			utils.c
 OBJ = $(CFILES:.c=.o)
-NAME = philosophers
+NAME = philo
 
 all: $(NAME)
 

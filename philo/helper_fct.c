@@ -22,34 +22,34 @@ int	ft_is_space(char c)
 	return ((c >= 9 && c <= 13) && c != ' ');
 }
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-long ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-    long i;
-    long res;
+	long	i;
+	long	res;
 
-    i = 0;
-    res = 0;
-    while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-        || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-        i++;
-    if (str[i] == '+')
-        i++;
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        res = (res * 10) + str[i] - '0';
-        i++;
-        if (res > 2147483647)
-            return (-1);
-    }
-    return (res);
+	i = 0;
+	res = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		res = (res * 10) + str[i] - '0';
+		i++;
+		if (res > 2147483647)
+			return (-1);
+	}
+	return (res);
 }
